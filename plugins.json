@@ -12,7 +12,7 @@
         "description": "YARA rule making tool for Binary Ninja, Cutter, and IDA",
         "license": {
             "name": "MIT",
-            "text": "Copyright (c) 2019 Vector 35 Inc\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+            "text": "Copyright (c) 2018 Hyun Yi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
         },
         "platforms": [
             "Darwin",
@@ -29,7 +29,7 @@
         "author": "Hyun Yi",
         "minimumbinaryninjaversion": 3469,
         "longdescription": "# Hyara\n\n![Version](https://img.shields.io/badge/version-2.2-blue.svg?cacheSeconds=2592000)\n\n<img src=\"images/Hyara.gif\" width=\"100%\">\n\n> Hyara is plugin that provides convenience when writing yararule.\n> \n> The plugin is currently undergoing a major revision!\n\n- [Demo video](https://youtu.be/zgL4BkQJZ-w)\n\n## Instructions\n\n### Start Screen and Options\n\n- When you run Hyara, it docks itself to the right and docks the output window to the left.\n- After specifying the address, press the `Make` button to show the specified hexadecimal or strings as a result.\n- The results are saved in the table below when you click `Save`.\n- If you double-click the table, you can clear the rule.\n- `Export Yara Rule`\n  - Exports the previously created yara rules.\n<img src=\"images/Hyara_1.png\" width=\"100%\">\n\n- `Right Click`\n  - You can select either start address or end address. (IDA Pro, Cutter)\n<img src=\"images/Hyara_7.png\" width=\"100%\">\n  \n- `Comment Option`\n  - Annotates the instructions next to the condition rule(s).\n- `Rich Header` and `imphash`\n  - Adds rich header and imphash matching to the rule.\n- `String option`\n  - This option extracts strings within the range specified.\n\n<img src=\"images/Hyara_3.png\" width=\"100%\">\n<img src=\"images/cutter_1.png\" width=\"100%\">\n\n## Installation\n\n### IDA Pro & BinaryNinja\n\n```bash\npip install -r requirements.txt\n```\n- IDA Pro\n  - copy ``Hyara_IDA.py and hyara_lib folder`` to $ida_dir/plugins\n  - Activate via Edit -> Plugins -> Hyara (or CTRL+SHIFT+Y)\n- BinaryNinja\n  - copy ``Hyara_BinaryNinja.py and hyara_lib folder`` to BinaryNinja Plugin directory\n  - Activate via View -> Show Hyara\n\n### Cutter\n\n- Windows\n```bash\nC:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python37\\\\python.exe -m pip install -I -t $cutter_dir/python37/site-packages -r requirements.txt\n```\n\ncopy ``__init__.py, Hyara_Cutter.py and hyara_lib folder`` to $cutter_dir/plugins/python/Hyara\n\n- Linux\n\n<img src=\"images/cutter_install__1.png\" width=\"100%\">\n\n```bash\ncp -r /tmp/.mount_Cutter5o3a5G/usr /root\npip3.9 install -I -t /root/usr/lib/python3.9/site-packages -r /root/Hyara/requirements.txt\n./Cutter-v2.0.3-x64.Linux.AppImage --pythonhome /root/usr\n```\n\ncopy ``__init__.py, Hyara_Cutter.py and hyara_lib folder`` to /root/.local/share/rizin/cutter/plugins/python/Hyara\n\nActivate via Windows -> Plugins -> Hyara\n\n<img src=\"images/cutter__0.png\" width=\"100%\">\n\n## Features\n\n- GUI-based\n- Supports BinaryNinja, Cutter, and IDA\n- YaraChecker\n  - Tests the yararule on the fly\n  - <img src=\"images/Hyara_4.png\" width=\"100%\">\n- YaraDetector\n  - Shows which part is detected in the sample loaded to disassembler, and when \"Address\" is clicked, it moves to the corresponding address on the disassembler view.\n  - <img src=\"images/Hyara_5.png\" width=\"100%\">\n- YaraIcon\n  - Creates yara rules for icon resources embedded in the PE.\n  - <img src=\"images/Hyara_6.png\" width=\"100%\">\n\n## Author\n\n\ud83d\udc64 **hyuunnn**\n\n* Github: [@hyuunnn](https://github.com/hyuunnn)\n\n### Special Thanks\n\n* Twitter: <a href=\"https://twitter.com/kjkwak12\">kjkwak12</a>\n* Github: <a href=\"https://github.com/gaasedelen\">gaasedelen</a> - <a href=\"https://github.com/hyuunnn/Hyara/blob/master/hyara_lib/integration/binaryninja_api.py#L9\">Link</a>\n* Github: <a href=\"https://github.com/ITAYC0HEN\">ITAYC0HEN</a> - <a href=\"https://github.com/hyuunnn/Hyara/pull/14\">Link</a>\n",
-        "lastUpdated": 1655232769,
+        "lastUpdated": 1655245605,
         "projectUrl": "https://github.com/psifertex/Hyara",
         "projectData": {
             "id": 503467652,
@@ -98,8 +98,8 @@
             "releases_url": "https://api.github.com/repos/psifertex/Hyara/releases{/id}",
             "deployments_url": "https://api.github.com/repos/psifertex/Hyara/deployments",
             "created_at": "2022-06-14T18:00:51Z",
-            "updated_at": "2022-06-14T18:52:49",
-            "pushed_at": "2022-06-14T18:52:48Z",
+            "updated_at": "2022-06-14T22:26:45",
+            "pushed_at": "2022-06-14T22:26:44Z",
             "git_url": "git://github.com/psifertex/Hyara.git",
             "ssh_url": "git@github.com:psifertex/Hyara.git",
             "clone_url": "https://github.com/psifertex/Hyara.git",
@@ -389,7 +389,7 @@
         "authorUrl": "https://github.com/psifertex",
         "packageUrl": "https://api.github.com/repos/psifertex/Hyara/zipball/refs/tags/2.2",
         "path": "psifertex_Hyara",
-        "commit": "f74934cb95a1475e6c6269578c30d9b7fb1521fb",
+        "commit": "56e188657e3c671c80714dcf099be9d0b78493df",
         "minimumBinaryNinjaVersion": 0,
         "subdir": "hyara_lib/integration/bn_hyara"
     },
