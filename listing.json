@@ -1,5 +1,10 @@
 [
   {
+    "name": "psifertex/Hyara",
+    "auto_update": true,
+    "subdir": "hyara_lib/integration/bn_hyara"
+  },
+  {
     "name": "CySHell/ClassyPP",
     "auto_update": true
   },
